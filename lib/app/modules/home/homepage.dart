@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
-import 'package:todo/app/core/values/app_colors.dart';
-import 'package:todo/app/data/models/task.dart';
 import 'package:todo/app/modules/home/controller.dart';
 import 'package:todo/app/core/utils/extensions.dart';
 import 'package:todo/app/modules/home/widgets/add_card.dart';
