@@ -85,11 +85,14 @@ class AddCard extends StatelessWidget {
                         String color =
                             icons[homeCtrl.chipIndex.value].color!.toString();
                         var task = Task(
-                            title: homeCtrl.editCtrl.text,
-                            icon: icon,
-                            color: color,);
-                            Get.back();
-                            homeCtrl.addTask(task) ? EasyLoading.showSuccess("Create Success") : EasyLoading.showError("Duplicated Task");
+                          title: homeCtrl.editCtrl.text,
+                          icon: icon,
+                          color: color,
+                        );
+                        Get.back();
+                        homeCtrl.addTask(task)
+                            ? EasyLoading.showSuccess("Create Success")
+                            : EasyLoading.showError("Duplicated Task");
                       }
                     },
                     child: const Text("Confirm"),
