@@ -83,7 +83,7 @@ class AddCard extends StatelessWidget {
                         int icon =
                             icons[homeCtrl.chipIndex.value].icon!.codePoint;
                         String color =
-                            icons[homeCtrl.chipIndex.value].color!.toString();
+                            icons[homeCtrl.chipIndex.value].color!.toHex();
                         var task = Task(
                           title: homeCtrl.editCtrl.text,
                           icon: icon,
@@ -91,8 +91,8 @@ class AddCard extends StatelessWidget {
                         );
                         Get.back();
                         homeCtrl.addTask(task)
-                            ? EasyLoading.showSuccess("Create Success")
-                            : EasyLoading.showError("Duplicated Task");
+                            ? EasyLoading.showSuccess("Task ban gaya hai")
+                            : EasyLoading.showError("Task duplicate");
                       }
                     },
                     child: const Text("Confirm"),
@@ -101,6 +101,8 @@ class AddCard extends StatelessWidget {
               ),
             ),
           );
+          homeCtrl.editCtrl.clear();
+          homeCtrl.changeChipIndex(0);
         },
         child: DottedBorder(
           color: Colors.grey[400]!,
