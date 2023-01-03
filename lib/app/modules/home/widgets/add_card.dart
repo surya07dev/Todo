@@ -80,7 +80,7 @@ class AddCard extends StatelessWidget {
                     ),
                     onPressed: () {
                       if (homeCtrl.formKey.currentState!.validate()) {
-                        int icon =
+                        int icon = 
                             icons[homeCtrl.chipIndex.value].icon!.codePoint;
                         String color =
                             icons[homeCtrl.chipIndex.value].color!.toHex();

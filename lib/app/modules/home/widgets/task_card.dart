@@ -40,14 +40,14 @@ class TaskCard extends StatelessWidget {
             selectedGradientColor: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [green.withOpacity(0.5), green],
+              colors: [color.withOpacity(0.5), color],
             ),
             unselectedColor: Colors.white,
           ),
           Padding(
             padding: EdgeInsets.all(6.0.wp),
             child: Icon(
-              IconData(task.icon, fontFamily: "materilaIons"),
+              IconData(task.icon, fontFamily: 'MaterialIcons'),
               color: color,
             ),
           ),
