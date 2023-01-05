@@ -55,12 +55,17 @@ class HomePage extends GetView<HomeController> {
       floatingActionButton: DragTarget(
         builder: (_, __, ___) {
           return Obx(
-            () => FloatingActionButton(
-                backgroundColor: controller.deleting.value ? Colors.red : null,
-                onPressed: () =>
-                    Get.to(() => AddDialog(), transition: Transition.downToUp),
-                child:
-                    Icon(controller.deleting.value ? Icons.delete : Icons.add)),
+            () => controller.tasks.isEmpty
+                ? const SizedBox()
+                : FloatingActionButton(
+                    backgroundColor:
+                        controller.deleting.value ? Colors.red : null,
+                    onPressed: () => Get.to(
+                          () => AddDialog(),
+                          transition: Transition.downToUp,
+                        ),
+                    child: Icon(
+                        controller.deleting.value ? Icons.delete : Icons.add)),
           );
         },
         onAccept: (Task task) {
