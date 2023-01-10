@@ -3,6 +3,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'package:todo/app/core/utils/extensions.dart';
+import 'package:todo/app/modules/detalis/widgets/doing_list.dart';
 import 'package:todo/app/modules/home/controller.dart';
 
 class DetailPage extends StatelessWidget {
@@ -57,7 +58,6 @@ class DetailPage extends StatelessWidget {
           Obx(() {
             var totalTodos =
                 homeCtrl.doingTodos.length + homeCtrl.doneTodos.length;
-
             return Padding(
               padding:
                   EdgeInsets.only(left: 16.0.wp, top: 3.0.wp, right: 16.0.wp),
@@ -124,7 +124,8 @@ class DetailPage extends StatelessWidget {
                 return null;
               },
             ),
-          )
+          ),
+          DoingList()
         ],
       ),
     ));
